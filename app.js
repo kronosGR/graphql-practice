@@ -1,6 +1,10 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
+require('dotenv').config();
+
+const db = require('./models');
+db.sequelize.sync({ force: false });
 
 const schema = buildSchema(`
 type Query {
