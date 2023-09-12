@@ -3,7 +3,7 @@ module.exports = (graphql) => {
     name: 'Student',
     fields: {
       id: {
-        type: new graphql.GraphQLNotNull(graphql.GraphQLID),
+        type: new graphql.GraphQLNonNull(graphql.GraphQLID),
       },
       SchoolId: {
         type: graphql.GraphQLID,
