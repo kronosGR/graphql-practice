@@ -8,7 +8,7 @@ const GraphQL = require('graphql');
 
 const studentType = require('./types/studentType')(GraphQL);
 const StudentService = require('./services/studentService');
-const schoolType = require('./types/schoolType');
+const schoolType = require('./types/schoolType')(GraphQL);
 const SchoolService = require('./services/SchoolService');
 const studentService = new StudentService(db);
 
